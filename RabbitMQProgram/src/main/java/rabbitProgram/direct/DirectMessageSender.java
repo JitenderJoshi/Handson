@@ -35,18 +35,18 @@ public class DirectMessageSender {
 	public void sendMessage1() {
 		final DirectMessage message = new DirectMessage("Hello, MessageNumber 1", new Random().nextInt(50));
 		log.info("Sending message 1...");
-		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectqueue1routingkey(), message);
+		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectmsg1routingkey(), message);
 	}
 	
 	public void sendMessage2() {
 		final DirectMessage message = new DirectMessage("Hello, MessageNumber 2", new Random().nextInt(50));
 		log.info("Sending message 2...");
-		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectqueue2routingkey(), message);
+		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectmsg2routingkey(), message);
 	}
 	
 	public void sendMessage34() {
 		final DirectMessage message = new DirectMessage("Hello, MessageNumber 34", new Random().nextInt(50));
 		log.info("Sending message 34...");
-		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectqueue34routingkey(), message);
+		rabbitTemplate.convertAndSend(config.getDirectexchangename(), config.getDirectmsg34routingkey(), message);
 	}
 }
