@@ -26,10 +26,10 @@ public class DirectConfiguration {
 		return new Queue(config.getDirectqueue1name());
 	}
 
-	/* Binding between direct exchange and Queue1 using routing key */
+	/* Binding between direct exchange and Queue1 using binding key */
 	@Bean
 	public Binding declareBindingDirectExchangeQueue1() {
-		return BindingBuilder.bind(getDirectExchangeQueue1()).to(getDirectExchange()).with(config.getDirectqueue1routingkey());
+		return BindingBuilder.bind(getDirectExchangeQueue1()).to(getDirectExchange()).with(config.getDirectqueue1bindingkey());
 	}
 
 	/* Creating a bean for the direct exchange queue 2 */
@@ -38,10 +38,10 @@ public class DirectConfiguration {
 		return new Queue(config.getDirectqueue2name());
 	}
 
-	/* Binding between direct exchange and Queue2 using routing key */
+	/* Binding between direct exchange and Queue2 using binding key */
 	@Bean
 	public Binding declareBindingDirectExchangeQueue2() {
-		return BindingBuilder.bind(getDirectExchangeQueue2()).to(getDirectExchange()).with(config.getDirectqueue2routingkey());
+		return BindingBuilder.bind(getDirectExchangeQueue2()).to(getDirectExchange()).with(config.getDirectqueue2bindingkey());
 	}
 
 	/* Creating a bean for the direct exchange queue 3 */
@@ -56,16 +56,16 @@ public class DirectConfiguration {
 		return new Queue(config.getDirectqueue4name());
 	}
 
-	/* Binding between direct exchange and Queue3 using routing key */
+	/* Binding between direct exchange and Queue3 using binding key */
 	@Bean
 	public Binding declareBindingDirectExchangeQueue3() {
-		return BindingBuilder.bind(getDirectExchangeQueue3()).to(getDirectExchange()).with(config.getDirectqueue34routingkey());
+		return BindingBuilder.bind(getDirectExchangeQueue3()).to(getDirectExchange()).with(config.getDirectqueue3bindingkey());
 	}
 
-	/* Binding between direct exchange and Queue4 using routing key */
+	/* Binding between direct exchange and Queue4 using binding key */
 	@Bean
 	public Binding declareBindingDirectExchangeQueue4() {
-		return BindingBuilder.bind(getDirectExchangeQueue4()).to(getDirectExchange()).with(config.getDirectqueue34routingkey());
+		return BindingBuilder.bind(getDirectExchangeQueue4()).to(getDirectExchange()).with(config.getDirectqueue4bindingkey());
 	}
 
 }

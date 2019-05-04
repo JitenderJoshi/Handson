@@ -36,6 +36,18 @@ public class ConfigReader {
 	@Value("${direct.queue34.routing.key}")
 	private String directqueue34routingkey;
 
+	@Value("${direct.queue1.binding.key}")
+	private String directqueue1bindingkey;
+
+	@Value("${direct.queue2.binding.key}")
+	private String directqueue2bindingkey;
+
+	@Value("${direct.queue3.binding.key}")
+	private String directqueue3bindingkey;
+
+	@Value("${direct.queue4.binding.key}")
+	private String directqueue4bindingkey;
+
 	public String getDirectexchangename() {
 		return directexchangename;
 	}
@@ -100,6 +112,40 @@ public class ConfigReader {
 		this.directqueue34routingkey = directqueue34routingkey;
 	}
 	
+	public String getDirectqueue1bindingkey() {
+		return directqueue1bindingkey;
+	}
+
+	public void setDirectqueue1bindingkey(String directqueue1bindingkey) {
+		this.directqueue1bindingkey = directqueue1bindingkey;
+	}
+
+	public String getDirectqueue2bindingkey() {
+		return directqueue2bindingkey;
+	}
+
+	public void setDirectqueue2bindingkey(String directqueue2bindingkey) {
+		this.directqueue2bindingkey = directqueue2bindingkey;
+	}
+
+	public String getDirectqueue3bindingkey() {
+		return directqueue3bindingkey;
+	}
+
+	public void setDirectqueue3bindingkey(String directqueue3bindingkey) {
+		this.directqueue3bindingkey = directqueue3bindingkey;
+	}
+
+	public String getDirectqueue4bindingkey() {
+		return directqueue4bindingkey;
+	}
+
+	public void setDirectqueue4bindingkey(String directqueue4bindingkey) {
+		this.directqueue4bindingkey = directqueue4bindingkey;
+	}
+
+
+
 	/** 
 	 * FANOUT EXCHANGE 
 	 **/
