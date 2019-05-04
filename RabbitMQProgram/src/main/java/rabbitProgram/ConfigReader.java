@@ -8,6 +8,10 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:application.properties")
 public class ConfigReader {
 	
+	/** 
+	 * DIRECT EXCHANGE 
+	 **/
+
 	@Value("${direct.exchange.name}")
 	private String directexchangename;
 
@@ -95,5 +99,54 @@ public class ConfigReader {
 	public void setDirectqueue34routingkey(String directqueue34routingkey) {
 		this.directqueue34routingkey = directqueue34routingkey;
 	}
+	
+	/** 
+	 * FANOUT EXCHANGE 
+	 **/
+
+	@Value("${fanout.exchange.name}")
+	private String fanoutexchangename;
+
+	@Value("${fanout.queue1.name}")
+	private String fanoutqueue1name;
+
+	@Value("${fanout.queue2.name}")
+	private String fanoutqueue2name;
+
+	@Value("${fanout.queue3.name}")
+	private String fanoutqueue3name;
+
+	public String getFanoutexchangename() {
+		return fanoutexchangename;
+	}
+
+	public void setFanoutexchangename(String fanoutexchangename) {
+		this.fanoutexchangename = fanoutexchangename;
+	}
+
+	public String getFanoutqueue1name() {
+		return fanoutqueue1name;
+	}
+
+	public void setFanoutqueue1name(String fanoutqueue1name) {
+		this.fanoutqueue1name = fanoutqueue1name;
+	}
+
+	public String getFanoutqueue2name() {
+		return fanoutqueue2name;
+	}
+
+	public void setFanoutqueue2name(String fanoutqueue2name) {
+		this.fanoutqueue2name = fanoutqueue2name;
+	}
+
+	public String getFanoutqueue3name() {
+		return fanoutqueue3name;
+	}
+
+	public void setFanoutqueue3name(String fanoutqueue3name) {
+		this.fanoutqueue3name = fanoutqueue3name;
+	}
+
 
 }

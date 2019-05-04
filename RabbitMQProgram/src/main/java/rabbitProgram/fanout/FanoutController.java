@@ -1,15 +1,15 @@
-package rabbitProgram.direct;
+package rabbitProgram.fanout;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/rabbitmq/direct")
-public class DirectController {
+@RequestMapping(path = "/rabbitmq/fanout")
+public class FanoutController {
 
 	@Autowired
-	private DirectMessageSender messagesender;
+	private FanoutMessageSender messagesender;
 
 	@RequestMapping("/send1")
 	public void sendMessagetoQueue1() {
@@ -21,9 +21,9 @@ public class DirectController {
 		messagesender.sendMessage2();
 	}
 
-	@RequestMapping("/send34")
-	public void sendMessagetoQueue34() {
-		messagesender.sendMessage34();
+	@RequestMapping("/send3")
+	public void sendMessagetoQueue3() {
+		messagesender.sendMessage3();
 	}
 
 }
